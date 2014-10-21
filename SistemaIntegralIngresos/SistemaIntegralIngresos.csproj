@@ -188,6 +188,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201410202207374_InitialCreate.cs" />
+    <Compile Include="Migrations\201410202207374_InitialCreate.Designer.cs">
+      <DependentUpon>201410202207374_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410202338443_AddCodeToCampus.cs" />
+    <Compile Include="Migrations\201410202338443_AddCodeToCampus.Designer.cs">
+      <DependentUpon>201410202338443_AddCodeToCampus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Campus.cs" />
@@ -316,6 +324,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201410202207374_InitialCreate.resx">
+      <DependentUpon>201410202207374_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410202338443_AddCodeToCampus.resx">
+      <DependentUpon>201410202338443_AddCodeToCampus.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
