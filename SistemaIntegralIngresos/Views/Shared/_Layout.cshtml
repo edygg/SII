@@ -10,22 +10,22 @@
     </head>
     <body>
         <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+            <div class="sticky">
+                <nav class="top-bar" data-topbar="" role="navigation" data-options="sticky_on: large">
+                    <ul class="title-area">
+                        <li class="name">
+                            <h1>
+                                @Html.ActionLink("Home", "Index", "Home")
+                            </h1>
+                        </li>
+                    </ul>
+                    <section class="tob-bar-section">
+                        <ul class="right">
+                            @Html.ActionLink("Iniciar Sesión","Login","Account", new { @class = "button" })
                         </ul>
-                    </nav>
-                </div>
+                    </section>
+                </nav>
             </div>
         </header>
         <div id="body">
@@ -37,7 +37,7 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                    <p> @DateTime.Now.Date.ToShortDateString() - Sistema Integral de Ingreso</p>
                 </div>
             </div>
         </footer>
