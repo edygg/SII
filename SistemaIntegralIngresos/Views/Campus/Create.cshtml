@@ -3,50 +3,53 @@
 @{
     ViewBag.Title = "Create";
 }
+<div class="row">
 
-<h2>Create</h2>
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+    <h2>Crear nuevo Campus</h2>
 
-    <fieldset>
-        <legend>Campus</legend>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Code)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Code)
-            @Html.ValidationMessageFor(model => model.Code)
-        </div>
+        <fieldset>
+            <legend>Campus</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Name)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
-            @Html.ValidationMessageFor(model => model.Name)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Code)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Code)
+                @Html.ValidationMessageFor(model => model.Code)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Details)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Details)
-            @Html.ValidationMessageFor(model => model.Details)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Name)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
-}
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Details)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Details)
+                @Html.ValidationMessageFor(model => model.Details)
+            </div>
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+            <p>
+                <input type="submit" value="Crear" />
+            </p>
+        </fieldset>
+    }
+
+    <div>
+        @Html.ActionLink("Regresar a la Lista", "Index")
+    </div>
 </div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
