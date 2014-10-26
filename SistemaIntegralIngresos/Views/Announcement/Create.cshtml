@@ -1,60 +1,58 @@
 ﻿@model SistemaIntegralIngresos.Models.Announcement
 
-@{
-    ViewBag.Title = "Create";
-}
+<div class="row">
 
-<h2>Create</h2>
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+        <fieldset>
+            <legend>Registro de Visitas</legend>
 
-    <fieldset>
-        <legend>Announcement</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Observations)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Observations)
-            @Html.ValidationMessageFor(model => model.Observations)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.InitialDate)
+            </div>
+            <div class="editor-field">
+                
+                @Html.EditorFor(model => model.InitialDate)
+                @Html.ValidationMessageFor(model => model.InitialDate)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.InitialDate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.InitialDate)
-            @Html.ValidationMessageFor(model => model.InitialDate)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.FinalDate)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.FinalDate)
+                @Html.ValidationMessageFor(model => model.FinalDate)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.FinalDate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.FinalDate)
-            @Html.ValidationMessageFor(model => model.FinalDate)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SpecificDays)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.SpecificDays)
+                @Html.ValidationMessageFor(model => model.SpecificDays)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Observations)
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(model => model.Observations)
+                @Html.ValidationMessageFor(model => model.Observations)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.SpecificDays)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.SpecificDays)
-            @Html.ValidationMessageFor(model => model.SpecificDays)
-        </div>
+            <p>
+                <input type="submit" value="Create" class="button" />
+            </p>
+        </fieldset>
+    }
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
-}
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
