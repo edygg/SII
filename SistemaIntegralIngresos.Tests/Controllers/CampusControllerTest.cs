@@ -1,8 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SistemaIntegralIngresos;
+using SistemaIntegralIngresos.Controllers;
 using Telerik.JustMock;
 using SistemaIntegralIngresos.Models;
-using System.Collections.Generic;
 
 namespace SistemaIntegralIngresos.Tests.Controllers
 {
@@ -13,8 +18,8 @@ namespace SistemaIntegralIngresos.Tests.Controllers
         public void TestIndex()
         {
             //Arrange
-            var model = Mock.Create<Repository>();
-            Mock.Arrange(() => model.GetAllCampus()).
+            var campusRepository = Mock.Create<Repository>();
+            Mock.Arrange(() => campusRepository.GetAllCampus()).
                 Returns(new List<Campus>()
             {
                 new Campus{Id=1, Code="test1", Details="test1", Name="test1"},
@@ -22,6 +27,13 @@ namespace SistemaIntegralIngresos.Tests.Controllers
 
             }).MustBeCalled();
 
+            //Act
+            CampusController controller = new CampusController(campusRepository);
+            ViewResult viewResult = controller.IndexForTest() as ViewResult;
+            var model = viewResult.Model as IEnumerable<Campus>;
+            
+            //Assert 
+            Assert.AreEqual(2, model.Count() );
         }
     }
 }

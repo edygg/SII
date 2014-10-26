@@ -13,13 +13,35 @@ namespace SistemaIntegralIngresos.Controllers
     public class CampusController : Controller
     {
         private SIIDbContext db = new SIIDbContext();
+        private Repository repository;
+
+        public CampusController(Repository repository) 
+        {
+            this.repository = repository;
+        }
+
+        public CampusController()
+        {
+            this.repository = new WorkingCampusRepository();
+        }
 
         //
         // GET: /Campus/
 
         public ActionResult Index()
         {
+            //test CampusController
+            //var Campus = repository.GetAllCampus();
+           // return View(Campus);
             return View(db.Campus.ToList());
+        }
+
+        //this method is just for test index
+        public ActionResult IndexForTest()
+        {
+            //test CampusController
+            var Campus = repository.GetAllCampus();
+            return View(Campus);
         }
 
         //
