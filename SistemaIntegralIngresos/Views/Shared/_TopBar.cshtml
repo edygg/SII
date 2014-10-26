@@ -3,13 +3,32 @@
         <li class="name">
             <h1>@Html.ActionLink("Inicio", "Index", "Home")</h1>
         </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
 
-    <section class="top-bat-section">
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
         <ul class="right">
-            <li class="has-form">
-                @Html.ActionLink("Inciar Sesión", "Login", "Account", routeValues: null, htmlAttributes: new { @class = "button" })
-            </li>
+            @if (User.Identity.IsAuthenticated) 
+            { 
+                <li class="has-dropdown">
+                    <a href="#">@User.Identity.Name</a>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="javascript:document.getElementById('logoutForm').submit()">Cerrar Sesión</a>
+                            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                            {
+                                @Html.AntiForgeryToken()
+                            }
+                        </li>
+                    </ul>
+                </li>
+            }
+        </ul>
+
+        <!-- Left Nav Section -->
+        <ul class="left">
+            
         </ul>
     </section>
 </nav>

@@ -8,10 +8,9 @@ namespace SistemaIntegralIngresos.Controllers
 {
     public class HomeController : Controller
     {
+        [Authorize]
         public ActionResult Index()
         {
-            ViewBag.ModuleTitle = "Página de inicio";
-
             return View();
         }
 
