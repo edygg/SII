@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SistemaIntegralIngresos.Controllers;
-
+using Telerik.JustMock;
+using SistemaIntegralIngresos.Models;
+using System.Collections.Generic;
 
 namespace SistemaIntegralIngresos.Tests.Controllers
 {
@@ -10,11 +10,18 @@ namespace SistemaIntegralIngresos.Tests.Controllers
     public class CampusControllerTest
     {
         [TestMethod]
-        public void TestIndexView()
+        public void TestIndex()
         {
-            var controller = new CampusController();
-            var result = controller.Index() as ViewResult;
-            Assert.AreEqual("Index", result.ViewName);
+            //Arrange
+            var model = Mock.Create<Repository>();
+            Mock.Arrange(() => model.GetAllCampus()).
+                Returns(new List<Campus>()
+            {
+                new Campus{Id=1, Code="test1", Details="test1", Name="test1"},
+                new Campus{Id=1, Code="test1", Details="test1", Name="test1"}
+
+            }).MustBeCalled();
+
         }
     }
 }
