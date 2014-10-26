@@ -183,8 +183,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AnnouncementController.cs" />
     <Compile Include="Controllers\CampusController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VisitController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -201,10 +203,17 @@
     <Compile Include="Migrations\201410261344007_ValidationsOnCampus.Designer.cs">
       <DependentUpon>201410261344007_ValidationsOnCampus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201410261856490_AnnouncementsAndVisits.cs" />
+    <Compile Include="Migrations\201410261856490_AnnouncementsAndVisits.Designer.cs">
+      <DependentUpon>201410261856490_AnnouncementsAndVisits.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Announcement.cs" />
     <Compile Include="Models\Campus.cs" />
+    <Compile Include="Models\Repository.cs" />
     <Compile Include="Models\SIIDbContext.cs" />
+    <Compile Include="Models\Visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -610,6 +619,16 @@
     <Content Include="Views\Shared\_TopBar.cshtml" />
     <Content Include="Views\Shared\_HeaderWithLogo.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Announcement\Index.cshtml" />
+    <Content Include="Views\Announcement\Details.cshtml" />
+    <Content Include="Views\Announcement\Create.cshtml" />
+    <Content Include="Views\Announcement\Edit.cshtml" />
+    <Content Include="Views\Announcement\Delete.cshtml" />
+    <Content Include="Views\Visit\Index.cshtml" />
+    <Content Include="Views\Visit\Details.cshtml" />
+    <Content Include="Views\Visit\Create.cshtml" />
+    <Content Include="Views\Visit\Edit.cshtml" />
+    <Content Include="Views\Visit\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -626,6 +645,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201410261344007_ValidationsOnCampus.resx">
       <DependentUpon>201410261344007_ValidationsOnCampus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410261856490_AnnouncementsAndVisits.resx">
+      <DependentUpon>201410261856490_AnnouncementsAndVisits.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
