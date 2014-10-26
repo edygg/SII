@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SistemaIntegralIngresos.Models;
+using Microsoft.VisualStudio.QualityTools.UnitTestFramework;
 
 namespace SistemaIntegralIngresos.Controllers
 {
