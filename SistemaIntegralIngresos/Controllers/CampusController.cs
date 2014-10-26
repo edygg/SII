@@ -30,13 +30,10 @@ namespace SistemaIntegralIngresos.Controllers
 
         public ActionResult Index()
         {
-            //test CampusController
-            //var Campus = repository.GetAllCampus();
-           // return View(Campus);
             return View(db.Campus.ToList());
         }
 
-        //this method is just for test index
+        //this method is just for testing Index
         public ActionResult IndexForTest()
         {
             //test CampusController
@@ -53,6 +50,18 @@ namespace SistemaIntegralIngresos.Controllers
             if (campus == null)
             {
                 return HttpNotFound();
+            }
+            return View(campus);
+        }
+
+        //this method is just for testing Details
+        public ActionResult TestingDetails(int id = 0)
+        {
+            var model = repository.GetAllCampus();
+            List<Campus> campus = model.Where(b => b.Id == id).ToList();
+            if (campus == null)
+            {
+               return HttpNotFound();
             }
             return View(campus);
         }
