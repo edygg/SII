@@ -18,7 +18,7 @@ namespace SistemaIntegralIngresos.Tests.Controllers
                 Returns(new List<Campus>()
             {
                 new Campus{Id=1, Code="test1", Details="test1", Name="test1"},
-                new Campus{Id=1, Code="test1", Details="test1", Name="test1"}
+                new Campus{Id=2, Code="test2", Details="test2", Name="test2"}
 
             }).MustBeCalled();
 
