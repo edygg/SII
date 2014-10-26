@@ -25,10 +25,17 @@
                 </li>
             }
         </ul>
-
-        <!-- Left Nav Section -->
-        <ul class="left">
-            
-        </ul>
+         @if (User.Identity.IsAuthenticated)
+         { 
+            <!-- Left Nav Section -->
+            <ul class="left">
+                <li class="has-dropdown">
+                    <a>Usuarios</a>
+                    <ul class="dropdown">
+                        <li>@Html.ActionLink("Crear", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                    </ul>
+                </li>
+            </ul>
+         }
     </section>
 </nav>
