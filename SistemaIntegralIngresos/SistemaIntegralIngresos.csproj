@@ -196,6 +196,10 @@
     <Compile Include="Migrations\201410202338443_AddCodeToCampus.Designer.cs">
       <DependentUpon>201410202338443_AddCodeToCampus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201410261344007_ValidationsOnCampus.cs" />
+    <Compile Include="Migrations\201410261344007_ValidationsOnCampus.Designer.cs">
+      <DependentUpon>201410261344007_ValidationsOnCampus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Campus.cs" />
@@ -329,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201410202338443_AddCodeToCampus.resx">
       <DependentUpon>201410202338443_AddCodeToCampus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410261344007_ValidationsOnCampus.resx">
+      <DependentUpon>201410261344007_ValidationsOnCampus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
