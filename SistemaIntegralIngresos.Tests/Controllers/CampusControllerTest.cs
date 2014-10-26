@@ -52,12 +52,10 @@ namespace SistemaIntegralIngresos.Tests.Controllers
             //Act
             CampusController controller = new CampusController(campusRepository);
             ViewResult viewResult = controller.TestingDetails(1) as ViewResult;
-            var model = viewResult.Model as IEnumerable<Campus>;
+            var model = viewResult.Model as Campus;
 
             //Assert 
-            Assert.AreEqual(2, model.Count());
-            Assert.Equals(1, model.ToList()[0].Id);
-
+            Assert.AreEqual(1, model.Id);
         }
     }
   

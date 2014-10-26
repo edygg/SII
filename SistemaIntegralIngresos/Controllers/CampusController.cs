@@ -33,14 +33,6 @@ namespace SistemaIntegralIngresos.Controllers
             return View(db.Campus.ToList());
         }
 
-        //this method is just for testing Index
-        public ActionResult IndexForTest()
-        {
-            //test CampusController
-            var Campus = repository.GetAllCampus();
-            return View(Campus);
-        }
-
         //
         // GET: /Campus/Details/5
 
@@ -50,18 +42,6 @@ namespace SistemaIntegralIngresos.Controllers
             if (campus == null)
             {
                 return HttpNotFound();
-            }
-            return View(campus);
-        }
-
-        //this method is just for testing Details
-        public ActionResult TestingDetails(int id = 0)
-        {
-            var model = repository.GetAllCampus();
-            List<Campus> campus = model.Where(b => b.Id == id).ToList();
-            if (campus == null)
-            {
-               return HttpNotFound();
             }
             return View(campus);
         }
@@ -151,5 +131,28 @@ namespace SistemaIntegralIngresos.Controllers
             db.Dispose();
             base.Dispose(disposing);
         }
+
+        //this method is just for testing Index
+        public ActionResult IndexForTest()
+        {
+            //test CampusController
+            var Campus = repository.GetAllCampus();
+            return View(Campus);
+        }
+
+
+        //this method is just for testing Details
+        public ActionResult TestingDetails(int id = 0)
+        {
+            var model = repository.GetAllCampus();
+            Campus campus = model.ToList()[0];
+            if (campus == null)
+            {
+                return HttpNotFound();
+            }
+            return View(campus);
+        }
+
+
     }
 }

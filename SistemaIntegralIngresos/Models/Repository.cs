@@ -9,5 +9,6 @@ namespace SistemaIntegralIngresos.Models
     public interface Repository
     {
         List<Campus> GetAllCampus();
+        
     }
 }
