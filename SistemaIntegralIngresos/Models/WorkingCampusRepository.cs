@@ -12,5 +12,11 @@ namespace SistemaIntegralIngresos.Models
            //ToDO: add Repository Data
             return null;
         }
+
+        public List<Visit> GetAllVisit()
+        {
+            //ToDO: add Repository Data
+            return null;
+        }
     }
 }
