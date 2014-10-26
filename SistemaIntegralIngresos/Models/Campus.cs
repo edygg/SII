@@ -10,9 +10,12 @@ namespace SistemaIntegralIngresos.Models
     {
         public int Id { get; set; }
         [Required]
+        [Display(Name = "Código")]
         public String Code { get; set; }
         [Required]
+        [Display(Name = "Nombre")]
         public String Name { get; set; }
+        [Display(Name = "Detalles")]
         public String Details { get; set; }
     }
 }

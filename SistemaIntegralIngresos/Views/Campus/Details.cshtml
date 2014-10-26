@@ -1,36 +1,48 @@
 ﻿@model SistemaIntegralIngresos.Models.Campus
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalle de campus";
 }
 
-<h2>Details</h2>
+<div class="row">
+    <div class="small-8 small-offset-2 columns">
+        <h4>¿Está seguro que desea eliminar el campus?</h4>
+        <fieldset>
+            <legend>Campus</legend>
+            <div class="row">
+                <div class="small-2 columns">
+                    <span class="label">@Html.DisplayNameFor(model => model.Code)</span>
+                </div>
+                <div class="small-10 columns">
+                    @Html.DisplayFor(model => model.Code)
+                </div>
+            </div>
 
-<fieldset>
-    <legend>Campus</legend>
+            <div class="row">
+                <div class="small-2 columns">
+                    <span class="label">@Html.DisplayNameFor(model => model.Name)</span>
+                </div>
+                <div class="small-10 columns">
+                    @Html.DisplayFor(model => model.Name)
+                </div>
+            </div>
 
-    <div class="display-label">
-        @Html.DisplayNameFor(model => model.Code)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Code)
-    </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <span class="label">@Html.DisplayNameFor(model => model.Details)</span>
+                </div>
+                <div class="small-10 columns">
+                    @Html.DisplayFor(model => model.Details)
+                </div>
+            </div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Name)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
-    </div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Details)
+        </fieldset>
+       
+        <ul class="button-group">
+            <li>@Html.ActionLink("Editar", "Edit", "Campus", new { id = Model.Id }, htmlAttributes: new { @class = "small button" })</li>
+            <li>@Html.ActionLink("Regresar a la lista", "Index", "Campus", htmlAttributes: new { @class = "small button" })</li>
+        </ul>
+        
     </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Details)
-    </div>
-</fieldset>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+</div>

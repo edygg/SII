@@ -35,7 +35,14 @@
                         <li>@Html.ActionLink("Crear", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
                     </ul>
                 </li>
-            </ul>
+                <li class="has-dropdown">
+                    <a>Campus</a>
+                    <ul class="dropdown">
+                        <li>@Html.ActionLink("Crear", "Create", "Campus")</li>
+                        <li>@Html.ActionLink("Administrar", "Index", "Campus")</li>
+                    </ul>
+                </li>
+>            </ul>
          }
     </section>
 </nav>
