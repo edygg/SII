@@ -1,9 +1,7 @@
 ﻿using System;
+using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SistemaIntegralIngresos.Models;
-using System.Linq;
-using System.Web;
-using System.Data.Entity;
+using SistemaIntegralIngresos.Controllers;
 
 
 namespace SistemaIntegralIngresos.Tests.Controllers
@@ -12,13 +10,11 @@ namespace SistemaIntegralIngresos.Tests.Controllers
     public class CampusControllerTest
     {
         [TestMethod]
-        [ExpectedException(typeof(System.Data.Entity.Validation.DbEntityValidationException))]
-        public void TestCampusWithEmptyName()
+        public void TestIndexView()
         {
-            var campus = new Campus { Id = 1, Name = "", Code = "UTGU", Details = "" };
-            SIIDbContext context = new SIIDbContext();
-            context.Campus.Add(campus);
-            context.SaveChanges();
+            var controller = new CampusController();
+            var result = controller.Index() as ViewResult;
+            Assert.AreEqual("Index", result.ViewName);
         }
     }
 }
