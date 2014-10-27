@@ -76,24 +76,33 @@
             </div>
         </div>
         <div class="parte2">
-
-            <div class="large-12 columns">
-                <label>Nombre: </label>
-                <input type="text" />
-                <input type="radio" name="tipo_entrada" value="Vehicular">
-                <label>Vehicular</label>
-                <input type="radio" name="tipo_entrada" value="Peatonal">
-                <label>Peatonal</label>
-
-            </div>
+            <fieldset>
+                <legend>Ingrese Nombre(s)</legend>
+                <div class="large-8 columns">
+                    <label>Nombre: </label>
+                    <input type="text" />
+                </div>
              
+                <div class="large-3 columns">
+                        <label>Tipo de entrada:</label>
+                        <input type="radio" name="tipo_entrada" value="Vehicular">
+                        <label>Vehicular</label>
+                        <input type="radio" name="tipo_entrada" value="Peatonal">
+                        <label>Peatonal</label>
+                </div>
+                <div class="large-1 columns">
+                    <a class="button tiny"><i class="fi-plus"></i> Agregar</a>
+                </div>
+            </fieldset>
             <div class="large-12 columns">
-
+                <fieldset>
+                    <legend>Observaciones:</legend>
+                    <textarea></textarea>
+                </fieldset>
             </div>
-
             <div class="large-12 columns">
                 <button>Atrás</button>
-                <input type="submit" value="Guardar"/>
+                <input type="submit" value="Guardar" class="button"/>
             </div>
         </div>
         
