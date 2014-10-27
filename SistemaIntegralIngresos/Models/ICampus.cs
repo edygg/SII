@@ -11,6 +11,6 @@ namespace SistemaIntegralIngresos.Models
         List<Campus> GetAllCampus();
         Boolean InsertCampus(Campus campus);
         Boolean DeleteCampus();
-        Boolean FindByID();
+        Campus FindByID (int id);
     }
 }

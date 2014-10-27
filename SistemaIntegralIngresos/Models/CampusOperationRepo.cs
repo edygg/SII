@@ -45,19 +45,16 @@ namespace SistemaIntegralIngresos.Models
             throw new NotImplementedException();
         }
 
-        public bool FindByID()
+        public Campus FindByID(int id)
         {
-            Campus campus = new Campus { Id = 1, Code = "test2", Details = "test2", Name = "test2" };
-            _db.Campus.Add(campus);
-            _db.SaveChanges();
-            if (campus != null)
+            Campus campus = _db.Campus.Find(id);
+            if ( campus.Name != null)
             using (_db)
             {
-                return true;
+                return campus;
             }
             throw new NotImplementedException();
-           
-            
+          
         }
 
     }

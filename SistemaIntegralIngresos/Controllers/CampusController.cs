@@ -150,9 +150,9 @@ namespace SistemaIntegralIngresos.Controllers
             return repository.DeleteCampus();
         }
 
-        public Boolean FindByID()
+        public Campus FindByID(int id )
         {
-            return repository.FindByID();
+            return repository.FindByID(id);
         }
 
 

@@ -78,17 +78,15 @@ namespace SistemaIntegralIngresos.Tests.Controllers
         public void FindByID()
         {
             //Arrange
-            //Campus campus = new Campus { Id = 1, Code = "test2", Details = "test2", Name = "test2" };
             var mockRepo = Mock.Create<ICampus>();
-            Mock.Arrange(() => mockRepo.FindByID()).Returns(true);
-
+            Mock.Arrange(() => mockRepo.FindByID(1));
 
             //Act
             CampusController controller = new CampusController();
-            var viewResult = controller.FindByID();
+            var viewResult = controller.FindByID(1) as Campus;
 
             //Assert
-            Assert.AreEqual(true, viewResult);
+            Assert.AreEqual("UNITEC Tegucigalpa", viewResult.Name);
         }
 
     }
