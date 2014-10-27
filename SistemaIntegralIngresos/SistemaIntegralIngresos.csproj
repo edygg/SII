@@ -186,6 +186,7 @@
     <Compile Include="Controllers\AnnouncementController.cs" />
     <Compile Include="Controllers\CampusController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RVAController.cs" />
     <Compile Include="Controllers\VisitController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -629,6 +630,7 @@
     <Content Include="Views\Visit\Create.cshtml" />
     <Content Include="Views\Visit\Edit.cshtml" />
     <Content Include="Views\Visit\Delete.cshtml" />
+    <Content Include="Views\RVA\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
