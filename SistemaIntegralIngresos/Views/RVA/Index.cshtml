@@ -1,12 +1,11 @@
 ﻿
-@ViewBag.ModuleTitle
 
 <div class="row">
-    <h2>Registro de Visitas Anunciadas</h2>
+    <h2>@ViewBag.ModuleTitle</h2>
 
     @using (Html.BeginForm())
     {
-        
+        @Html.AntiForgeryToken()   
         <div class="parte1">
 
         
@@ -23,9 +22,9 @@
                 <fieldset>
                     <legend>Tipo de Fechas:</legend>
 
-                    <input type="radio" name="tipo_fecha" value="Fecha Unica" checked="checked">
+                    <input class="fecha_unica" type="radio" name="tipo_fecha" value="Fecha Unica" checked="checked">
                     <label>Fecha Unica</label>
-                    <input type="radio" name="tipo_fecha" value="Múltiples Fechas">
+                    <input class="fecha_multi" type="radio" name="tipo_fecha" value="Múltiples Fechas">
                     <label>Múltiples Fechas</label>
                </fieldset>
             </div>
@@ -39,7 +38,7 @@
             <div class="large-6 columns">
                 <fieldset>
                     <legend>Hasta</legend>
-                    <input id="Final_Date" type="date" />
+                    <input id="Final_Date" type="date" disabled="disabled"/>
                 </fieldset>
             </div>
 
@@ -74,7 +73,7 @@
 
             </div>
             <div class="large-12 columns">
-                <button>Siguiente</button>
+                <button class="next">Siguiente</button>
             </div>
         </div>
         <div class="parte2">
@@ -103,10 +102,15 @@
                 </fieldset>
             </div>
             <div class="large-12 columns">
-                <button>Atrás</button>
+                <button class="back">Atrás</button>
                 <input type="submit" value="Guardar" class="button"/>
             </div>
         </div>
         
     }
 </div>
+
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/rva.js")
+}
