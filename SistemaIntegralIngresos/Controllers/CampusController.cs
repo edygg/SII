@@ -145,14 +145,19 @@ namespace SistemaIntegralIngresos.Controllers
             return repository.InsertCampus(campus);
         }
         
-        public Boolean DeleteCampus()
+        public Boolean DeleteCampus(int id )
         {
-            return repository.DeleteCampus();
+            return repository.DeleteCampus(id);
         }
 
         public Campus FindByID(int id )
         {
             return repository.FindByID(id);
+        }
+
+        public Boolean EditCampus(Campus campus)
+        {
+            return repository.EditCampus(campus);
         }
 
 

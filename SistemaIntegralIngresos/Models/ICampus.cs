@@ -10,7 +10,8 @@ namespace SistemaIntegralIngresos.Models
     {
         List<Campus> GetAllCampus();
         Boolean InsertCampus(Campus campus);
-        Boolean DeleteCampus();
+        Boolean DeleteCampus(int id);
         Campus FindByID (int id);
+        Boolean EditCampus(Campus campus);
     }
 }

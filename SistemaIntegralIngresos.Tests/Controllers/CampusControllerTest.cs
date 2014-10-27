@@ -64,11 +64,11 @@ namespace SistemaIntegralIngresos.Tests.Controllers
             //Campus campus = new Campus { Id = 1 , Code = "test2", Details = "test2", Name = "test2" };
             var mockRepo = Mock.Create<ICampus>();
             //Mock.Arrange(() => mockRepo.InsertCampus(campus)).Returns(true);
-            Mock.Arrange(() => mockRepo.DeleteCampus() ).Returns(true);
+            Mock.Arrange(() => mockRepo.DeleteCampus( 1) ).Returns(true);
 
             //Act
             CampusController controller = new CampusController(mockRepo);
-            var viewResult = controller.DeleteCampus();
+            var viewResult = controller.DeleteCampus( 1 );
 
             //Assert
             Assert.AreEqual(true, viewResult);
@@ -88,6 +88,23 @@ namespace SistemaIntegralIngresos.Tests.Controllers
             //Assert
             Assert.AreEqual("UNITEC Tegucigalpa", viewResult.Name);
         }
+
+        [TestMethod]
+        public void EditCampus()
+        {
+            //Arrange
+            Campus campus = new Campus { Id = 1, Name = "UNITEC Tegucigalpa", Details = "", Code = "UTGU" };
+            var mockRepo = Mock.Create<ICampus>();
+            Mock.Arrange(() => mockRepo.EditCampus(campus)).Returns(true);
+
+            //Act
+            CampusController controller = new CampusController();
+            var viewResult = controller.EditCampus(campus);
+
+            //Assert
+            Assert.AreEqual(true, viewResult);
+        }
+
 
     }
   
