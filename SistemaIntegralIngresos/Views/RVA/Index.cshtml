@@ -2,37 +2,100 @@
 <div class="row">
     <h2>Registro de Visitas Anunciadas</h2>
 
-    <div class="large- columns" >
-        <fieldset>
-            <legend>Seleccione el campus:</legend>
+    @using (Html.BeginForm())
+    {
+        
+        <div class="parte1">
+
+        
+            <div class="large- columns" >
+                <fieldset>
+                    <legend>Seleccione el campus:</legend>
             
-            @Html.DropDownList("Campus","Seleccione un campus")
-        </fieldset>
+                    @Html.DropDownList("Campus","Seleccione un campus")
+                </fieldset>
 
-    </div>
-
+            </div>    
+            <div class="large-12 columns">
     
-    <div class="large-12 columns">
-    
-        <fieldset>
-            <legend>Tipo de Fechas:</legend>
+                <fieldset>
+                    <legend>Tipo de Fechas:</legend>
 
-            <input type="radio" name="tipo_fecha">Fecha Unica</input>
-            <input type="radio" name="tipo_fecha">Múltiples Fechas</input>
-       </fieldset>
-    </div>
+                    <input type="radio" name="tipo_fecha" value="Fecha Unica">
+                    <label>Fecha Unica</label>
+                    <input type="radio" name="tipo_fecha" value="Múltiples Fechas">
+                    <label>Múltiples Fechas</label>
+               </fieldset>
+            </div>
 
-    <div class="large-6 columns">
-        <fieldset>
-            <legend>Desde</legend>
-            <input id="Initial_Date" type="date"/>
-        </fieldset>
-    </div>
-    <div class="large-6 columns">
-        <fieldset>
-            <legend>Hasta</legend>
-            <input id="Final_Date" type="date" />
-        </fieldset>
-    </div>
+            <div class="large-6 columns">
+                <fieldset>
+                    <legend>Desde</legend>
+                    <input id="Initial_Date" type="date"/>
+                </fieldset>
+            </div>
+            <div class="large-6 columns">
+                <fieldset>
+                    <legend>Hasta</legend>
+                    <input id="Final_Date" type="date" />
+                </fieldset>
+            </div>
 
+            <div class="large-12 columns">
+
+                <fieldset>
+                    <legend>Días</legend>
+                    <input type="checkbox" value="T"/>
+                    <label>Todos los días</label>
+
+                    <input type="checkbox" value="L" />
+                    <label>Lunes</label>
+            
+                    <input type="checkbox" value="M"/>
+                    <label>Martes</label>
+            
+                    <input type="checkbox" value="X" />
+                    <label>Miércoles</label>
+            
+                    <input type="checkbox" value="J" />
+                    <label>Jueves</label>
+            
+                    <input type="checkbox" value="V"/>
+                    <label>Viernes</label>
+            
+                    <input type="checkbox" value="S" />
+                    <label>Sábado</label>
+
+                    <input type="checkbox" value="D" />
+                    <label>Domingo</label>
+                </fieldset>
+
+            </div>
+            <div class="large-12 columns">
+                <button>Siguiente</button>
+            </div>
+        </div>
+        <div class="parte2">
+
+            <div class="large-12 columns">
+                <label>Nombre: </label>
+                <input type="text" />
+                <input type="radio" name="tipo_entrada" value="Vehicular">
+                <label>Vehicular</label>
+                <input type="radio" name="tipo_entrada" value="Peatonal">
+                <label>Peatonal</label>
+
+            </div>
+             
+            <div class="large-12 columns">
+
+            </div>
+
+            <div class="large-12 columns">
+                <button>Atrás</button>
+                <input type="submit" value="Guardar"/>
+            </div>
+        </div>
+        
+    }
 </div>

@@ -20,5 +20,13 @@ namespace SistemaIntegralIngresos.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Index(string campus)
+        {
+
+            return View();
+        }
+
     }
 }
