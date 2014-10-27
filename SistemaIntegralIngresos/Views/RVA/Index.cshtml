@@ -1,4 +1,6 @@
 ﻿
+@ViewBag.ModuleTitle
+
 <div class="row">
     <h2>Registro de Visitas Anunciadas</h2>
 
@@ -21,7 +23,7 @@
                 <fieldset>
                     <legend>Tipo de Fechas:</legend>
 
-                    <input type="radio" name="tipo_fecha" value="Fecha Unica">
+                    <input type="radio" name="tipo_fecha" value="Fecha Unica" checked="checked">
                     <label>Fecha Unica</label>
                     <input type="radio" name="tipo_fecha" value="Múltiples Fechas">
                     <label>Múltiples Fechas</label>
@@ -85,7 +87,7 @@
              
                 <div class="large-3 columns">
                         <label>Tipo de entrada:</label>
-                        <input type="radio" name="tipo_entrada" value="Vehicular">
+                        <input type="radio" name="tipo_entrada" value="Vehicular" checked="checked">
                         <label>Vehicular</label>
                         <input type="radio" name="tipo_entrada" value="Peatonal">
                         <label>Peatonal</label>
