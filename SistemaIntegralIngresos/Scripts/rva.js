@@ -28,4 +28,15 @@ $tipo_fecha.on('change', function ()
     }
 });
 
+$('.semana').on('change', function ()
+{
+    var self = this;
+    if ($(self).is(':checked')) {
+        $('.dia').prop('checked', true)
+        $('.dia').attr('disabled', true);
+    } else {
+        $('.dia').prop('checked', false)
+        $('.dia').attr('disabled', false);
+    }
+});
 
