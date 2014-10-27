@@ -21,7 +21,7 @@ namespace SistemaIntegralIngresos.Controllers
 
         public VisitController()
         {
-            this.repository = new WorkingCampusRepository();
+            this.repository = new WorkingModelRepository();
         }
 
         //

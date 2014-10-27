@@ -15,7 +15,7 @@ namespace SistemaIntegralIngresos.Tests.Controllers
     public class CampusControllerTest
     {
         [TestMethod]
-        public void TestIndex()
+        public void IndexReturnALlCampus()
         {
             //Arrange
             var campusRepository = Mock.Create<Repository>();
@@ -37,7 +37,7 @@ namespace SistemaIntegralIngresos.Tests.Controllers
         }
 
         [TestMethod]
-        public void testDetails()
+        public void Details_ReturnByID()
         {
             //Arrange
             var campusRepository = Mock.Create<Repository>();

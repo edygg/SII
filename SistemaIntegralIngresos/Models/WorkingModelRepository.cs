@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SistemaIntegralIngresos.Models
 {
-    public class WorkingCampusRepository : Repository
+    public class WorkingModelRepository :Repository
     {
         public List<Campus> GetAllCampus()
         {
@@ -13,9 +13,9 @@ namespace SistemaIntegralIngresos.Models
             return null;
         }
 
+
         public List<Visit> GetAllVisit()
         {
-            //ToDO: add Repository Data
             return null;
         }
     }

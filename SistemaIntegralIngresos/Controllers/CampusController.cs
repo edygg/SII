@@ -22,7 +22,7 @@ namespace SistemaIntegralIngresos.Controllers
 
         public CampusController()
         {
-            this.repository = new WorkingCampusRepository();
+            this.repository = new WorkingModelRepository();
         }
 
         //
