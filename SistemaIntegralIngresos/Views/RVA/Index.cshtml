@@ -13,7 +13,7 @@
                 <fieldset>
                     <legend>Seleccione el campus:</legend>
             
-                    @Html.DropDownList("Campus","Seleccione un campus")
+                    @Html.DropDownList("Campus",(SelectList)ViewBag.Campus)
                 </fieldset>
 
             </div>    
@@ -73,7 +73,7 @@
 
             </div>
             <div class="large-12 columns">
-                <button class="next">Siguiente</button>
+                <a class="next button">Siguiente</a>
             </div>
         </div>
         <div class="parte2">
@@ -102,7 +102,7 @@
                 </fieldset>
             </div>
             <div class="large-12 columns">
-                <button class="back">Atrás</button>
+                <a class="back button">Atrás</a>
                 <input type="submit" value="Guardar" class="button"/>
             </div>
         </div>
