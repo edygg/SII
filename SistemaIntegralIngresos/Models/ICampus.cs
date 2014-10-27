@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace SistemaIntegralIngresos.Models
 {
-    public interface Repository
+    public interface ICampus
     {
         List<Campus> GetAllCampus();
-        List<Visit> GetAllVisit();
-        
+        Boolean InsertCampus(Campus campus);
+        Boolean DeleteCampus();
+        Boolean FindByID();
     }
 }

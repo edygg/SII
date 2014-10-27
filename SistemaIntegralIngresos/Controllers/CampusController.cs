@@ -13,16 +13,16 @@ namespace SistemaIntegralIngresos.Controllers
     public class CampusController : Controller
     {
         private SIIDbContext db = new SIIDbContext();
-        private Repository repository;
+        private ICampus repository;
 
-        public CampusController(Repository repository) 
+        public CampusController(ICampus repository) 
         {
             this.repository = repository;
         }
 
         public CampusController()
         {
-            this.repository = new WorkingModelRepository();
+            this.repository = new CampusOperationRepo();
         }
 
         //
@@ -132,25 +132,27 @@ namespace SistemaIntegralIngresos.Controllers
             base.Dispose(disposing);
         }
 
-        //this method is just for testing Index
-        public ActionResult IndexForTest()
+       
+        public ActionResult GetAllCampus()
         {
             //test CampusController
             var Campus = repository.GetAllCampus();
             return View(Campus);
         }
 
-
-        //this method is just for testing Details
-        public ActionResult TestingDetails(int id = 0)
+        public Boolean InsertCampus(Campus campus )
         {
-            var model = repository.GetAllCampus();
-            Campus campus = model.ToList()[0];
-            if (campus == null)
-            {
-                return HttpNotFound();
-            }
-            return View(campus);
+            return repository.InsertCampus(campus);
+        }
+        
+        public Boolean DeleteCampus()
+        {
+            return repository.DeleteCampus();
+        }
+
+        public Boolean FindByID()
+        {
+            return repository.FindByID();
         }
 
 

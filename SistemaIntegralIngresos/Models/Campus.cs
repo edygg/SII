@@ -17,5 +17,7 @@ namespace SistemaIntegralIngresos.Models
         public String Name { get; set; }
         [Display(Name = "Detalles")]
         public String Details { get; set; }
+
+  
     }
 }

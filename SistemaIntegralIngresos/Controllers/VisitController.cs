@@ -12,18 +12,7 @@ namespace SistemaIntegralIngresos.Controllers
     public class VisitController : Controller
     {
         private SIIDbContext db = new SIIDbContext();
-        private Repository repository;
-
-        public VisitController(Repository repository) 
-        {
-            this.repository = repository;
-        }
-
-        public VisitController()
-        {
-            this.repository = new WorkingModelRepository();
-        }
-
+      
         //
         // GET: /Visit/
 
@@ -129,12 +118,6 @@ namespace SistemaIntegralIngresos.Controllers
         {
             db.Dispose();
             base.Dispose(disposing);
-        }
-
-        public ActionResult IndexTest()
-        {
-            var visit = repository.GetAllVisit();
-            return View(visit);
         }
     }
 }
