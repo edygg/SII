@@ -12,7 +12,7 @@ namespace SistemaIntegralIngresos.Controllers
     public class VisitController : Controller
     {
         private SIIDbContext db = new SIIDbContext();
-
+      
         //
         // GET: /Visit/
 

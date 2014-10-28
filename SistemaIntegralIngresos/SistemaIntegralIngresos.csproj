@@ -212,9 +212,10 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Announcement.cs" />
     <Compile Include="Models\Campus.cs" />
-    <Compile Include="Models\Repository.cs" />
+    <Compile Include="Models\ICampus.cs" />
     <Compile Include="Models\SIIDbContext.cs" />
     <Compile Include="Models\Visit.cs" />
+    <Compile Include="Models\CampusOperationRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
