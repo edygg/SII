@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head><base href="http://localhost:19610/RVA">
+        <meta charset="utf-8" />
+        <title> | SII</title>
+        <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/Content/foundation.min.css" rel="stylesheet"/>
+
+        <link href="/Content/Layout.css" rel="stylesheet"/>
+
+        <link href="/Content/foundation-icons/foundation-icons.css?v=-6_zzR_BwLqFqCPKpXxa56eDHYlTBHOUql5yYn8-ikw1" rel="stylesheet"/>
+
+        <script src="/Scripts/modernizr-2.6.2.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="/">Inicio</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+        </ul>
+    </section>
+</nav>
+        </header>
+        <section id="body">
+            <header>
+                <div class="row">
+    <div class="medium-10 small-9 columns text-center">
+        <h1>Sistema Integral de Ingresos (<acronym title="Sistema Integral de Ingresos">SII</acronym>)</h1>
+        <h2>Universidad Tecnológica Centroamericana</h2>
+    </div>
+    <div class="medium-2 small-3 columns">
+        <img src="/Images/unitec-logo.png" alt="Unitec Logo" />
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="text-center">
+        <h3></h3>
+    </div>
+</div>
+            </header>
+            
+
+<div class="row">
+    <h2></h2>
+
+<form action="/RVA/Index" method="post"><input name="__RequestVerificationToken" type="hidden" value="uGd_Va2zR3LLjLDtMMGaA-9jgEv8wIccvoG82Dt55oWR_YkT9bVx8FW3lpUE8eh-EVGLnkqg-8lYwe-m224ry7ikOYr_t9pJMlebyxad86U1" />        <div class="parte1">
+
+        
+            <div class="large- columns" >
+                <fieldset>
+                    <legend>Seleccione el campus:</legend>
+            
+                    <select id="Campus" name="Campus"><option value="1">UNITEC Tegucigalpa</option>
+<option value="2">UNITEC San Pedro Sula</option>
+<option value="3">UNITEC La Ceiba</option>
+<option value="4">CEUTEC Pr&#243;ceres</option>
+<option value="5">CEUTEC Prado</option>
+<option value="6">CEUTEC Centroam&#233;rica</option>
+<option value="7">CEUTEC San Pedro Sula</option>
+<option value="8">CEUTEC La Ceiba</option>
+</select>
+                </fieldset>
+
+            </div>    
+            <div class="large-12 columns">
+    
+                <fieldset>
+                    <legend>Tipo de Fechas:</legend>
+
+                    <input class="fecha_unica" type="radio" name="tipo_fecha" value="Fecha Unica" checked="checked">
+                    <label>Fecha Unica</label>
+                    <input class="fecha_multi" type="radio" name="tipo_fecha" value="Múltiples Fechas">
+                    <label>Múltiples Fechas</label>
+               </fieldset>
+            </div>
+
+            <div class="large-6 columns">
+                <fieldset>
+                    <legend>Desde</legend>
+                    <input id="Initial_Date" type="date"/>
+                </fieldset>
+            </div>
+            <div class="large-6 columns">
+                <fieldset>
+                    <legend>Hasta</legend>
+                    <input id="Final_Date" type="date" disabled="disabled"/>
+                </fieldset>
+            </div>
+
+            <div class="large-12 columns">
+
+                <fieldset>
+                    <legend>Días</legend>
+                    <input class="semana" type="checkbox" value="T"/>
+                    <label>Todos los días</label>
+
+                    <input class="dia" type="checkbox" value="L" />
+                    <label>Lunes</label>
+            
+                    <input class="dia" type="checkbox" value="M" />
+                    <label>Martes</label>
+            
+                    <input class="dia" type="checkbox" value="X" />
+                    <label>Miércoles</label>
+            
+                    <input class="dia" type="checkbox" value="J" />
+                    <label>Jueves</label>
+            
+                    <input class="dia" type="checkbox" value="V" />
+                    <label>Viernes</label>
+            
+                    <input class="dia" type="checkbox" value="S" />
+                    <label>Sábado</label>
+
+                    <input class="dia" type="checkbox" value="D" />
+                    <label>Domingo</label>
+                </fieldset>
+
+            </div>
+            <div class="large-12 columns">
+                <a class="next button">Siguiente</a>
+            </div>
+        </div>
+        <div class="parte2">
+            <fieldset>
+                <legend>Ingrese Nombre(s)</legend>
+                <div class="large-8 columns">
+                    <label>Nombre: </label>
+                    <input type="text" />
+                </div>
+             
+                <div class="large-3 columns">
+                        <label>Tipo de entrada:</label>
+                        <input type="radio" name="tipo_entrada" value="Vehicular" checked="checked">
+                        <label>Vehicular</label>
+                        <input type="radio" name="tipo_entrada" value="Peatonal">
+                        <label>Peatonal</label>
+                </div>
+                <div class="large-1 columns">
+                    <a class="button tiny"><i class="fi-plus"></i> Agregar</a>
+                </div>
+            </fieldset>
+            <div class="large-12 columns">
+                <fieldset>
+                    <legend>Observaciones:</legend>
+                    <textarea></textarea>
+                </fieldset>
+            </div>
+            <div class="large-12 columns">
+                <a class="back button">Atrás</a>
+                <input type="submit" value="Guardar" class="button"/>
+            </div>
+        </div>
+</form></div>
+
+
+
+        </section>
+
+        <script src="/Scripts/vendor/jquery.js"></script>
+
+        <script src="/Scripts/vendor/jquery.cookie.js"></script>
+
+        <script src="/Scripts/vendor/fastclick.js"></script>
+
+        <script src="/Scripts/vendor/modernizr.js"></script>
+
+        <script src="/Scripts/vendor/placeholder.js"></script>
+
+        <script src="/Scripts/foundation.min.js"></script>
+
+        <script src="/Scripts/Application.js"></script>
+;
+        
+    <script src="/Scripts/rva.js"></script>
+
+
+    </body>
+</html>

@@ -13,6 +13,17 @@ namespace SistemaIntegralIngresos.Controllers
     public class CampusController : Controller
     {
         private SIIDbContext db = new SIIDbContext();
+        private ICampus repository;
+
+        public CampusController(ICampus repository) 
+        {
+            this.repository = repository;
+        }
+
+        public CampusController()
+        {
+            this.repository = new CampusOperationRepo();
+        }
 
         //
         // GET: /Campus/
@@ -120,5 +131,35 @@ namespace SistemaIntegralIngresos.Controllers
             db.Dispose();
             base.Dispose(disposing);
         }
+
+       
+        public ActionResult GetAllCampus()
+        {
+            //test CampusController
+            var Campus = repository.GetAllCampus();
+            return View(Campus);
+        }
+
+        public Boolean InsertCampus(Campus campus )
+        {
+            return repository.InsertCampus(campus);
+        }
+        
+        public Boolean DeleteCampus(int id )
+        {
+            return repository.DeleteCampus(id);
+        }
+
+        public Campus FindByID(int id )
+        {
+            return repository.FindByID(id);
+        }
+
+        public Boolean EditCampus(Campus campus)
+        {
+            return repository.EditCampus(campus);
+        }
+
+
     }
 }
