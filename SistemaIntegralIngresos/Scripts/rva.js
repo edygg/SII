@@ -40,3 +40,8 @@ $('.semana').on('change', function ()
     }
 });
 
+$('form').on('submit', function ()
+{
+    console.log(1);
+});
+

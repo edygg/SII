@@ -22,9 +22,9 @@
                 <fieldset>
                     <legend>Tipo de Fechas:</legend>
 
-                    <input class="fecha_unica" type="radio" name="tipo_fecha" value="Fecha Unica" checked="checked">
+                    <input class="fecha_unica" type="radio" name="tipo_fecha" value="Fecha_unica" checked="checked">
                     <label>Fecha Unica</label>
-                    <input class="fecha_multi" type="radio" name="tipo_fecha" value="Múltiples Fechas">
+                    <input class="fecha_multi" type="radio" name="tipo_fecha" value="Multiples_fechas">
                     <label>Múltiples Fechas</label>
                </fieldset>
             </div>
@@ -32,13 +32,13 @@
             <div class="large-6 columns">
                 <fieldset>
                     <legend>Desde</legend>
-                    <input id="Initial_Date" type="date"/>
+                    <input id="Initial_Date" type="date" name="desde"/>
                 </fieldset>
             </div>
             <div class="large-6 columns">
                 <fieldset>
                     <legend>Hasta</legend>
-                    <input id="Final_Date" type="date" disabled="disabled"/>
+                    <input id="Final_Date" type="date" name="hasta" disabled="disabled"/>
                 </fieldset>
             </div>
 
@@ -46,28 +46,28 @@
 
                 <fieldset>
                     <legend>Días</legend>
-                    <input class="semana" type="checkbox" value="T"/>
+                    <input class="semana" type="checkbox" name="dia" value="T"/>
                     <label>Todos los días</label>
 
-                    <input class="dia" type="checkbox" value="L" />
+                    <input class="dia" type="checkbox" name="dia" value="L" />
                     <label>Lunes</label>
             
-                    <input class="dia" type="checkbox" value="M" />
+                    <input class="dia" type="checkbox" name="dia" value="M" />
                     <label>Martes</label>
             
-                    <input class="dia" type="checkbox" value="X" />
+                    <input class="dia" type="checkbox" name="dia" value="X" />
                     <label>Miércoles</label>
             
-                    <input class="dia" type="checkbox" value="J" />
+                    <input class="dia" type="checkbox" name="dia" value="J" />
                     <label>Jueves</label>
             
-                    <input class="dia" type="checkbox" value="V" />
+                    <input class="dia" type="checkbox" name="dia" value="V" />
                     <label>Viernes</label>
             
-                    <input class="dia" type="checkbox" value="S" />
+                    <input class="dia" type="checkbox" name="dia" value="S" />
                     <label>Sábado</label>
 
-                    <input class="dia" type="checkbox" value="D" />
+                    <input class="dia" type="checkbox" name="dia" value="D" />
                     <label>Domingo</label>
                 </fieldset>
 
@@ -81,7 +81,7 @@
                 <legend>Ingrese Nombre(s)</legend>
                 <div class="large-8 columns">
                     <label>Nombre: </label>
-                    <input type="text" />
+                    <input type="text" name="nombre" />
                 </div>
              
                 <div class="large-3 columns">
@@ -92,18 +92,18 @@
                         <label>Peatonal</label>
                 </div>
                 <div class="large-1 columns">
-                    <a class="button tiny"><i class="fi-plus"></i> Agregar</a>
+                    <a class="button tiny agregar"><i class="fi-plus"></i> Agregar</a>
                 </div>
             </fieldset>
             <div class="large-12 columns">
                 <fieldset>
                     <legend>Observaciones:</legend>
-                    <textarea></textarea>
+                    <textarea name="observaciones"></textarea>
                 </fieldset>
             </div>
             <div class="large-12 columns">
                 <a class="back button">Atrás</a>
-                <input type="submit" value="Guardar" class="button"/>
+                <a class="button guardar">Guardar</a>
             </div>
         </div>
         
