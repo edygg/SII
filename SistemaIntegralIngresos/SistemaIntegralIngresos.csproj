@@ -211,7 +211,9 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Announcement.cs" />
     <Compile Include="Models\Campus.cs" />
+    <Compile Include="Models\VisitOperationRepo.cs" />
     <Compile Include="Models\ICampus.cs" />
+    <Compile Include="Models\IVisit.cs" />
     <Compile Include="Models\SIIDbContext.cs" />
     <Compile Include="Models\Visit.cs" />
     <Compile Include="Models\CampusOperationRepo.cs" />

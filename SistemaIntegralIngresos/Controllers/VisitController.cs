@@ -12,6 +12,17 @@ namespace SistemaIntegralIngresos.Controllers
     public class VisitController : Controller
     {
         private SIIDbContext db = new SIIDbContext();
+          private IVisit repository;
+
+          public VisitController(IVisit repository) 
+        {
+            this.repository = repository;
+        }
+
+        public VisitController()
+        {
+            this.repository = new VisitOperationRepo();
+        }
       
         //
         // GET: /Visit/
